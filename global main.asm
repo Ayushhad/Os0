@@ -28,7 +28,7 @@ main :
 
     lea rdi, [stringin]
     xor rax,rax
-    call scanf
+    call printf
     
     lea rdi, [formatin]
     lea rsi, [string]
