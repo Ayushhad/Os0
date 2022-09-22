@@ -56,7 +56,7 @@ format2: db "%d", 10, 0
 stringin: db "Enter the string : ",0
 formatin: db "%s",0
 pout: db "The string is :", 0
-formatout: db "The string is : %s", 10,0
+formatout: db "%s", 10,0
 
 section .bss
 number: resb 4
