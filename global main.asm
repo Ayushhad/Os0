@@ -17,15 +17,27 @@ main :
     lea rsi, [number]
     call scanf
 
+    lea rdi, [printout]
+    xor rax, rax
+    call printf
+
     lea rdi, [format2]
-    lea rsi, [number]
+    mov rsi, [number]
     xor rax,rax
     call printf
 
+    lea rdi, [stringin]
+    xor rax,rax
+    call scanf
+    
     lea rdi, [formatin]
     lea rsi, [string]
     xor rax,rax
     call scanf
+
+    lea rdi, [pout]
+    xor rax,rax
+    call printf
 
     lea rdi, [formatout]
     lea rsi, [string]
@@ -39,6 +51,13 @@ main :
 section .data
 mess: db "Enter the number : ",0
 format: db "%d",0
-format2: db "The number is : %d", 10,0
-formatin: db"Enter the string : %s",0
+printout: db "The number is : ",0
+format2: db "%d", 10, 0
+stringin: db "Enter the string : ",0
+formatin: db "%s",0
+pout: db "The string is :", 0
 formatout: db "The string is : %s", 10,0
+
+section.bss
+number: resb 4
+string: resb 100
