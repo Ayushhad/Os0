@@ -58,6 +58,6 @@ formatin: db "%s",0
 pout: db "The string is :", 0
 formatout: db "The string is : %s", 10,0
 
-section.bss
+section .bss
 number: resb 4
 string: resb 100
